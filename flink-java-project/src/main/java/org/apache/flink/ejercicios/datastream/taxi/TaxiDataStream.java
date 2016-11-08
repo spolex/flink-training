@@ -32,7 +32,7 @@ public class TaxiDataStream {
 
 			@Override
 			public boolean filter(TaxiRide taxi) throws Exception {
-				return GeoUtils.isInNYC(taxi.startLon, taxi.startLat) || GeoUtils.isInNYC(taxi.endLon, taxi.endLat);
+				return GeoUtils.isInNYC(taxi.startLon, taxi.startLat) && GeoUtils.isInNYC(taxi.endLon, taxi.endLat);
 			}
 			
 		})
