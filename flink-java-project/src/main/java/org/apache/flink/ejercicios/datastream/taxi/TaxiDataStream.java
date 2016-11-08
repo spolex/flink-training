@@ -21,7 +21,7 @@ public class TaxiDataStream {
 		
 		// get the taxi ride data stream
 		DataStream<TaxiRide> rides = env.addSource(
-		  new TaxiRideSource("../data/nycTaxiRides.gz"));
+		  new TaxiRideSource("../data/nycTaxiRides.gz",1,10));
 		rides
 		.filter(new FilterFunction<TaxiRide>(){
 
